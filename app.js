@@ -1,10 +1,10 @@
 'use strict';
 
-//Global Vars
+//Global
 let votingRounds = 25;
 let itemArray = [];
 
-//Dom Ref
+//Dom 
 let imgContainer =document.getElementById('container');
 let imgOne = document.getElementById('image-one');
 let imgTwo = document.getElementById('image-two');
@@ -42,13 +42,12 @@ new Item('unicorn');
 new Item('water-can');
 new Item('wine-glass');
 
-console.log(itemArray);
 
 function getRandomIndex(){
   return Math.floor(Math.random()* itemArray.length);
 
 }
-//ask if this is right(the while loop specifically)
+
 function renderImgs(){
   let itemOneIndex = getRandomIndex();
   let itemTwoIndex = getRandomIndex();
@@ -85,7 +84,7 @@ function handleClick(event){
     }
 
   }
-//got this from the example, short of confused still
+
   votingRounds--;
   if(votingRounds === 0){
     imgContainer.removeEventListener('click', handleClick);
